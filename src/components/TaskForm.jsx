@@ -67,9 +67,12 @@ const TaskForm = ({ existingTask, onClose }) => {
         placeholder="Description"
         className="w-full p-2 mb-2 border rounded"
       />
-      <select name="dueDate" value={task.dueDate} onChange={{ handleChange }}>
-        <option value={new Date().toDateString()}>Today</option>
-      </select>
+      <input
+        type="date"
+        name="dueDate"
+        value={task.dueDate}
+        onChange={handleChange}
+      />
       <select
         name="status"
         value={task.status}
