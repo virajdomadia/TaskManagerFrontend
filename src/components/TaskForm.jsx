@@ -9,6 +9,7 @@ const TaskForm = ({ existingTask, onClose }) => {
       description: "",
       status: "pending",
       priority: "low",
+      dueDate: new Date(),
     }
   );
   const [error, setError] = useState(""); // 🔹 Store validation errors
@@ -66,6 +67,9 @@ const TaskForm = ({ existingTask, onClose }) => {
         placeholder="Description"
         className="w-full p-2 mb-2 border rounded"
       />
+      <select name="dueDate" value={task.dueDate} onChange={{ handleChange }}>
+        <option value={new Date().toDateString()}>Today</option>
+      </select>
       <select
         name="status"
         value={task.status}

@@ -68,6 +68,9 @@ const TaskCard = ({ task, onEdit }) => {
           <h3 className="text-lg font-semibold text-gray-900">{task.title}</h3>
           <p className="text-sm text-gray-600">{task.description}</p>
         </div>
+        <div>
+          <p className="text-sm text-black">{task.dueDate}</p>
+        </div>
         <div className="flex space-x-3">
           {/* Edit Button */}
           <button
